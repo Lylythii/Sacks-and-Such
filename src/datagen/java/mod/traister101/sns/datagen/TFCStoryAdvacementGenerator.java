@@ -102,7 +102,7 @@ public class TFCStoryAdvacementGenerator implements SmarterAdvancementGenerator 
 	@Override
 	public void addTranslations(final TranslationWriter writer) {
 		writer.add(STRAW_BAASKET.title(), "Straw Basket");
-		writer.add(STRAW_BAASKET.description(), "Make a primative basket out of straw");
+		writer.add(STRAW_BAASKET.description(), "Make a primitive basket out of straw");
 		writer.add(LEATHER_SACK.title(), "Leather Sack");
 		writer.add(LEATHER_SACK.description(), "Make a Leather Sack out of the finest of leather");
 		writer.add(FRAME_PACK.title(), "Un-Sophisticated Backpack");
@@ -114,7 +114,7 @@ public class TFCStoryAdvacementGenerator implements SmarterAdvancementGenerator 
 		writer.add(HIKING_BOOTS.description(), "Make some high quality boots helping you explore on foot");
 		writer.add(STEEL_TOE_HIKING_BOOTS.title(), "Protection for those toesies");
 		writer.add(STEEL_TOE_HIKING_BOOTS.description(), "Protect your toes with steel");
-		writer.add(STEEL_HORSESHOES.title(), "Well cared for");
-		writer.add(STEEL_HORSESHOES.description(), "Make horseshoes out of steel");
+		writer.add(STEEL_HORSESHOES.title(), "Horseshoes of speed");
+		writer.add(STEEL_HORSESHOES.description(), "Make horseshoes out of steel. It's like they are enchanted");
 	}
 }
