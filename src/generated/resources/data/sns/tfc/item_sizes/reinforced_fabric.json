@@ -1,6 +1,6 @@
 {
   "ingredient": {
-	"item": "sns:reinforced_fabric"
+    "item": "sns:reinforced_fabric"
   },
   "size": "small",
   "weight": "light"

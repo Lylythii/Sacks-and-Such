@@ -14,7 +14,7 @@
       "item": "sns:reinforced_fiber"
     },
     "T": {
-	  "tag": "forge:sheets/steel"
+      "tag": "forge:sheets/steel"
     },
     "W": {
       "item": "sns:buckle"

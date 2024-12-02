@@ -151,6 +151,10 @@ minecraft {
                 file("src/generated/resources/"),
                 "--existing",
                 file("src/main/resources/"),
+                "--existing",
+                file("resources/copied_images/"),
+                "--input",
+                file("resources/copied_images/"),
                 "--existing-mod",
                 "tfc"
             )

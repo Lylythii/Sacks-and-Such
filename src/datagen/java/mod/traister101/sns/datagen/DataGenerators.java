@@ -21,19 +21,19 @@ public final class DataGenerators {
 		final var existingFileHelper = event.getExistingFileHelper();
 		final var packOutput = generator.getPackOutput();
 
-		final var blockTagsProvider = generator.<BuiltInBlockTags>addProvider(event.includeServer(),
-				poutput -> new BuiltInBlockTags(poutput, lookupProvider, existingFileHelper));
-		generator.addProvider(event.includeServer(),
-				new BuiltInItemTags(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+		final var blockTags = generator.addProvider(event.includeServer(), new BuiltInBlockTags(packOutput, lookupProvider, existingFileHelper));
+		generator.addProvider(event.includeServer(), new BuiltInItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
 		generator.addProvider(event.includeServer(), new BuiltInEntityTags(packOutput, lookupProvider, existingFileHelper));
 		generator.addProvider(event.includeServer(), new BuiltInRecipes(packOutput));
 		generator.addProvider(event.includeServer(), new BuiltInCurios(packOutput, existingFileHelper, lookupProvider));
 		generator.addProvider(event.includeServer(), new BuiltInItemSizes(packOutput));
 		generator.addProvider(event.includeServer(), new BuiltInItemHeats(packOutput));
-		final var provider = BuiltInAvdancements.create(packOutput, lookupProvider, existingFileHelper);
-		generator.addProvider(event.includeServer(), provider);
+		final var advancementProvider = BuiltInAvdancements.create(packOutput, lookupProvider, existingFileHelper);
+		generator.addProvider(event.includeServer(), advancementProvider);
 
-		generator.addProvider(event.includeClient(), new BuiltIntLanguage(packOutput, provider));
+		generator.addProvider(event.includeClient(), new BuiltIntLanguage(packOutput, advancementProvider));
 		generator.addProvider(event.includeClient(), new BuiltInItemModels(packOutput, existingFileHelper));
+
+		generator.addProvider(event.includeClient() || event.includeDev(), new CopyTextures(packOutput, event.getInputs()));
 	}
 }

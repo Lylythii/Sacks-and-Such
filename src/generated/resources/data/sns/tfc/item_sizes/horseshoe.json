@@ -1,17 +1,17 @@
 {
   "ingredient": [
-	{
-	  "item": "sns:metal/horseshoe/steel"
-	},
-	{
-	  "item": "sns:metal/horseshoe/black_steel"
-	},
-	{
-	  "item": "sns:metal/horseshoe/blue_steel"
-	},
-	{
-	  "item": "sns:metal/horseshoe/red_steel"
-	}
+    {
+      "item": "sns:metal/horseshoe/steel"
+    },
+    {
+      "item": "sns:metal/horseshoe/black_steel"
+    },
+    {
+      "item": "sns:metal/horseshoe/blue_steel"
+    },
+    {
+      "item": "sns:metal/horseshoe/red_steel"
+    }
   ],
   "size": "normal",
   "weight": "light"
