@@ -94,7 +94,7 @@ public class BuiltInItemModels extends ItemModelProvider {
 		return iconWithHeldModel(item.get());
 	}
 
-	@SuppressWarnings("UnusedReturnValue")
+	@CanIgnoreReturnValue
 	private SeparateTransformsModelBuilder<ItemModelBuilder> iconWithHeldModel(final Item item) {
 		return iconWithHeldModel(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)));
 	}
