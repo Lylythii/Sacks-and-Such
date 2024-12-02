@@ -15,7 +15,7 @@ description = '''An addon for TFC focusing on bringing vessel like handheld cont
 [[dependencies.sns]]
 modId = "tfc"
 mandatory = true
-versionRange = "[3.1.9,)"
+versionRange = "[3.2.11,)"
 ordering = "AFTER"
 side = "BOTH"
 
@@ -49,6 +49,6 @@ side = "BOTH"
 
 [mc-publish]
 dependencies = [
-	"tfc@3.1.9{modrinth:JaCEZUhg}",
+	"tfc@3.2.11{modrinth:JaCEZUhg}",
 	"curios@5.4.5{modrinth:vvuO3ImH}"
 ]

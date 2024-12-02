@@ -1,14 +1,14 @@
 {
   "include": [
 	{
-	  "template": "tfc:sns/anvil_recipe",
+	  "template": "tfc:anvil_recipe",
 	  "as": "first",
 	  "using": {
 		"recipe": "#recipe"
 	  }
 	},
 	{
-	  "template": "tfc:sns/anvil_recipe",
+	  "template": "tfc:anvil_recipe",
 	  "as": "second",
 	  "y": 25,
 	  "using": {
@@ -16,7 +16,7 @@
 	  }
 	},
 	{
-	  "template": "tfc:sns/anvil_recipe",
+	  "template": "tfc:anvil_recipe",
 	  "as": "second",
 	  "y": 50,
 	  "using": {
@@ -24,7 +24,7 @@
 	  }
 	},
 	{
-	  "template": "tfc:sns/anvil_recipe",
+	  "template": "tfc:anvil_recipe",
 	  "as": "second",
 	  "y": 75,
 	  "using": {

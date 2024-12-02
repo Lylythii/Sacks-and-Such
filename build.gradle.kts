@@ -13,20 +13,20 @@ plugins {
 }
 
 // Allows local configuration.
-// Edit the generated `dev.gradle.kts` file
+// Edit the generated `dev.gradle` file
 //
-// extra.apply {
-//     set("mappings_channel", "parchment")
-//     set("mappings_version", "2023.09.03-1.20.1")
-//     set("minify_resources", false)
-//     set("use_advanced_class_redefinition", true)
+// ext {
+//     mappings_channel = "parchment"
+//     mappings_version = "2023.09.03-1.20.1"
+//     minify_resources = false
+//     use_advanced_class_redefinition = true
 // }
 // Properties that can be configured are:
 // "mappings_channel", "mappings_version" (suggested "parchment", "2023.09.03-1.20.1" respectivly)
 // "minify_resources" (suggested `false` for faster build times)
 // "use_advanced_class_redefinition" for the magic Jetbrains JDK hotswaps
-file("./dev.gradle.kts").createNewFile()
-apply(from = "dev.gradle.kts")
+file("./dev.gradle").createNewFile()
+apply(from = "dev.gradle")
 
 // MC version
 val minecraftVersion = "1.20.1"
@@ -44,7 +44,7 @@ val patchouliVersion = "81"
 val extendedSlotCapacityVersion = "1.2"
 val curiosVersion = "5.9.0"
 val jadeFileID = "4614153"
-val tfcFileID = "5571484"
+val tfcFileID = "5943050"
 
 val mappingsChannel: String = project.findProperty("mappings_channel") as String? ?: "official"
 val mappingsVersion: String = project.findProperty("mappings_version") as String? ?: minecraftVersion
