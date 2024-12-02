@@ -1,7 +1,7 @@
 package mod.traister101.sns.network;
 
 import mod.traister101.sns.common.items.HorseshoesItem;
-import mod.traister101.sns.mixins.common.acessor.AbstractHorseInventoryAcessor;
+import mod.traister101.sns.mixins.common.accessor.AbstractHorseInventoryAccessor;
 import net.dries007.tfc.client.ClientHelpers;
 
 import net.minecraft.core.particles.*;
@@ -37,7 +37,7 @@ public class ClientboundBreakHorseshoePacket {
 		final Entity entity = level.getEntity(id);
 		if (!(entity instanceof final AbstractHorse horse)) return;
 
-		final ItemStack item = ((AbstractHorseInventoryAcessor) horse).getInventory().getItem(HorseshoesItem.getHorseshoesSlot(horse));
+		final ItemStack item = ((AbstractHorseInventoryAccessor) horse).getInventory().getItem(HorseshoesItem.getHorseshoesSlot(horse));
 
 		if (!item.isEmpty()) {
 			if (!horse.isSilent()) {
