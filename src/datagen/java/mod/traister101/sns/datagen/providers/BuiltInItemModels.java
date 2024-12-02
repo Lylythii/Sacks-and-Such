@@ -1,5 +1,7 @@
 package mod.traister101.sns.datagen.providers;
 
+import com.google.common.base.Preconditions;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import mod.traister101.sns.SacksNSuch;
 import mod.traister101.sns.common.items.SNSItems;
 
@@ -48,6 +50,20 @@ public class BuiltInItemModels extends ItemModelProvider {
 		iconWithHeldModel(SNSItems.FRAME_PACK.get());
 	}
 
+	@Override
+	public ItemModelBuilder getBuilder(final String path) {
+		Preconditions.checkNotNull(path, "Path must not be null");
+		final ResourceLocation outputLoc = extendWithFolder(path.contains(":") ? mcLoc(path) : modLoc(path));
+		existingFileHelper.trackGenerated(outputLoc, MODEL);
+		return generatedModels.computeIfAbsent(outputLoc, factory);
+	}
+
+	private ResourceLocation extendWithFolder(final ResourceLocation rl) {
+		if (rl.getPath().startsWith(folder)) return rl;
+		return rl.withPrefix(folder + "/");
+	}
+
+	@CanIgnoreReturnValue
 	public ItemModelBuilder basicItem(final Item item, final ResourceLocation texture) {
 		return basicItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)), texture);
 	}
