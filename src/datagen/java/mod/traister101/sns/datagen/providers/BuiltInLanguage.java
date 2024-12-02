@@ -18,10 +18,11 @@ import java.util.stream.Collectors;
 
 public class BuiltInLanguage extends SmartLanguageProvider {
 
+	public static final String PACK_DESCRIPTION = "pack." + SacksNSuch.MODID + ".description";
 	/**
 	 * A set of our items that have registry names we can {@link #langify(String)} to get our actual item names
 	 */
-	public static final Set<RegistryObject<? extends Item>> SIMPLE_ITEM_LANG = Set.of(SNSItems.UNFINISHED_LEATHER_SACK, SNSItems.REINFORCED_FIBER,
+	private static final Set<RegistryObject<? extends Item>> SIMPLE_ITEM_LANG = Set.of(SNSItems.UNFINISHED_LEATHER_SACK, SNSItems.REINFORCED_FIBER,
 			SNSItems.REINFORCED_FABRIC, SNSItems.PACK_FRAME, SNSItems.LEATHER_STRIP, SNSItems.BOUND_LEATHER_STRIP, SNSItems.BUCKLE,
 			SNSItems.STRAW_BASKET, SNSItems.LEATHER_SACK, SNSItems.BURLAP_SACK, SNSItems.ORE_SACK, SNSItems.SEED_POUCH, SNSItems.FRAME_PACK,
 			SNSItems.LUNCHBOX, SNSItems.QUIVER, SNSItems.MOB_NET_ITEM, SNSItems.HIKING_BOOTS, SNSItems.STEEL_TOE_HIKING_BOOTS,
@@ -44,6 +45,7 @@ public class BuiltInLanguage extends SmartLanguageProvider {
 	protected void addTranslations() {
 		addItemTranslations();
 
+		add(PACK_DESCRIPTION, SacksNSuch.NAME + " Resources");
 		// Keybinds
 		add(SNSKeybinds.TOGGLE_PICKUP.getName(), "Toggle Container Item Pickup");
 		add(SNSKeybinds.OPEN_ITEM_CONTAINER.getName(), "Open Item Container");
